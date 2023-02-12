@@ -1,3 +1,5 @@
+import Navbar from "@/components/navbar";
+import { Box } from "@chakra-ui/react";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -5,8 +7,10 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <Main />
-        <NextScript />
+        <Box w="75%" mx="auto">
+          <Main />
+          <NextScript />
+        </Box>
       </body>
     </Html>
   );

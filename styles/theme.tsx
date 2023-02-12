@@ -9,7 +9,15 @@ const config = {
   useSystemColorMode: false,
 };
 
+const components = {
+  Text: {
+    baseStyle: {
+      marginBottom: "0.5em",
+    },
+  },
+};
+
 // 3. extend the theme
-const theme = extendTheme({ config });
+const theme = extendTheme({ config, components });
 
 export default theme;
