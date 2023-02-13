@@ -16,6 +16,7 @@ import {
 import Navbar from "@/components/navbar";
 
 import races from "@/data/races";
+import { basicClasses, classes } from "@/data/classes";
 
 const Dice = () => {
   return (
@@ -107,6 +108,84 @@ const Dice = () => {
                     <Divider mb={3} />
                     <Text size="sm" mb={3} textAlign="center">
                       {race.tagline}
+                    </Text>
+                  </Box>
+                </CardBody>
+              </Card>
+            </GridItem>
+          ))}
+        </Grid>
+
+        <Heading as="h2" size="lg" pt={8} pb={4}>
+          Basic classes
+        </Heading>
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(5, 1fr)",
+          }}
+          gap={6}
+          my={8}
+        >
+          {basicClasses.map((basciClass) => (
+            <GridItem key={basciClass.name} w="100%">
+              <Card overflow="hidden" borderRadius="lg" h="100%">
+                <Image
+                  objectFit="cover"
+                  src={
+                    "/static/classes/" + basciClass.name.toLowerCase() + ".jpg"
+                  }
+                  alt={basciClass.name}
+                  height="400px"
+                />
+                <CardBody>
+                  <Box>
+                    <Heading as="h3" textAlign="center" mb={3} size="lg">
+                      {basciClass.name}
+                    </Heading>
+                    <Divider mb={3} />
+                    <Text size="sm" mb={3} textAlign="center">
+                      {basciClass.tagline}
+                    </Text>
+                  </Box>
+                </CardBody>
+              </Card>
+            </GridItem>
+          ))}
+        </Grid>
+
+        <Heading as="h2" size="lg" pt={8} pb={4}>
+          Advanced Classes
+        </Heading>
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(5, 1fr)",
+          }}
+          gap={6}
+          my={8}
+        >
+          {classes.map((avdClass) => (
+            <GridItem key={avdClass.name} w="100%">
+              <Card overflow="hidden" borderRadius="lg" h="100%">
+                <Image
+                  objectFit="cover"
+                  src={
+                    "/static/classes/" + avdClass.name.toLowerCase() + ".jpg"
+                  }
+                  alt={avdClass.name}
+                  height="400px"
+                />
+                <CardBody>
+                  <Box>
+                    <Heading as="h3" textAlign="center" mb={3} size="lg">
+                      {avdClass.name}
+                    </Heading>
+                    <Divider mb={3} />
+                    <Text size="sm" mb={3} textAlign="center">
+                      {avdClass.tagline}
                     </Text>
                   </Box>
                 </CardBody>
