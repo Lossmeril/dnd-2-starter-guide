@@ -46,7 +46,7 @@ const Stats = () => {
         </Text>
         <Text>Well, guess what?</Text>
         <Image
-          src="/we-dont-do-that-here.gif"
+          src="/static/we-dont-do-that-here.gif"
           alt="We don't do that here"
           height="180px"
           my={4}
