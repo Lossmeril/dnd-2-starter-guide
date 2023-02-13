@@ -95,7 +95,7 @@ const Dice = () => {
               <Card overflow="hidden" borderRadius="lg" h="100%">
                 <Image
                   objectFit="cover"
-                  src={"/static/races/" + race.name + ".jpg"}
+                  src={"/static/" + race.name + ".jpg"}
                   alt={race.name}
                   height="400px"
                 />
