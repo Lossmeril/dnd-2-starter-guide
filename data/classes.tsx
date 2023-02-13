@@ -2,22 +2,27 @@ export const basicClasses = [
   {
     name: "Fighter",
     tagline: "A person",
+    colorScheme: "red",
   },
   {
     name: "Hunter",
     tagline: "",
+    colorScheme: "green",
   },
   {
     name: "Juggler",
     tagline: "",
+    colorScheme: "yellow",
   },
   {
     name: "Medic",
     tagline: "",
+    colorScheme: "purple",
   },
   {
     name: "Incantor",
     tagline: "",
+    colorScheme: "blue",
   },
 ];
 

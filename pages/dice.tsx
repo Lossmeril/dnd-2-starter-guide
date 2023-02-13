@@ -181,6 +181,17 @@ const Dice = () => {
             </Tbody>
           </Table>
         </TableContainer>
+
+        <Heading as="h2" size="lg" pt={8} pb={4}>
+          Types of rolls
+        </Heading>
+        <Heading as="h3" size="md" pt={8} pb={4}>
+          Skill Check (Character vs. Environment)
+        </Heading>
+
+        <Heading as="h3" size="md" pt={8} pb={4}>
+          Skill Check (Character vs. Character)
+        </Heading>
       </Box>
     </>
   );
