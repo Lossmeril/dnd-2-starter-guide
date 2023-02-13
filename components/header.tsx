@@ -1,7 +1,8 @@
-import { Heading, Box, Spacer, Divider, Stack } from "@chakra-ui/react";
 import Link from "next/link";
+import { Heading, Box, Spacer, Divider, Stack, Icon } from "@chakra-ui/react";
+import { GiDiceTwentyFacesTwenty } from "react-icons/gi";
 
-const Navbar = () => {
+const Header = () => {
   return (
     <>
       <Box py={5}>
@@ -13,9 +14,7 @@ const Navbar = () => {
             <Heading as="h1">Michael&apos;s D&D Starter Guide</Heading>
           </Link>
           <Spacer display={{ base: "none", lg: "unset" }} />
-          <Link href="/characters">Characters</Link>
-          <Link href="/stats">Stats and Equipment</Link>
-          <Link href="/dice">Dice</Link>
+          <Icon as={GiDiceTwentyFacesTwenty} h="100%" w="50px" />
         </Stack>
       </Box>
       <Divider />
@@ -23,4 +22,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

@@ -1,34 +1,6 @@
 import Head from "next/head";
-import {
-  Box,
-  Grid,
-  GridItem,
-  Heading,
-  Icon,
-  Kbd,
-  Table,
-  TableCaption,
-  TableContainer,
-  Tbody,
-  Td,
-  Text,
-  Tfoot,
-  Th,
-  Thead,
-  Tr,
-} from "@chakra-ui/react";
 
-import Navbar from "@/components/navbar";
-
-import { Body, Charisma, Soul } from "@/components/styled/charLimits";
-import {
-  GiD10,
-  GiD12,
-  GiD4,
-  GiDiceTwentyFacesTwenty,
-  GiDiceEightFacesEight,
-  GiPerspectiveDiceSix,
-} from "react-icons/gi";
+import MainLayout from "@/layouts/layout";
 
 export default function Home() {
   return (
@@ -39,8 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Box as="main"></Box>
+      <MainLayout></MainLayout>
     </>
   );
 }
