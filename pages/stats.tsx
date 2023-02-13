@@ -1,17 +1,28 @@
 import Head from "next/head";
 import {
   Box,
+  Card,
+  CardBody,
   Grid,
   GridItem,
   Heading,
+  HStack,
   Icon,
   Image,
+  Table,
+  TableCaption,
+  TableContainer,
+  Tbody,
+  Td,
   Text,
+  Th,
+  Thead,
+  Tr,
 } from "@chakra-ui/react";
 
 import Navbar from "@/components/navbar";
 
-import { Body, Charisma, Soul } from "@/components/styled/charLimits";
+import { Body, Charisma, Resource, Soul } from "@/components/styled/charLimits";
 import { GiBiceps, GiSheikahEye, GiDramaMasks } from "react-icons/gi";
 
 const Stats = () => {
@@ -47,36 +58,68 @@ const Stats = () => {
           and <Charisma>Charisma</Charisma>.
         </Text>
 
-        <Grid templateColumns="repeat(3, 1fr)" my={6} w="50%">
-          <GridItem>
-            <Icon as={GiBiceps} w="100px" h="100px" color="palevioletred" />
-            <Heading as="h4" size="sm">
-              Body
-            </Heading>
-          </GridItem>
-          <GridItem>
-            <Icon
-              as={GiSheikahEye}
-              w="100px"
-              h="100px"
-              color="mediumslateblue"
-            />
-            <Heading as="h4" size="sm">
-              Soul
-            </Heading>
-          </GridItem>
-          <GridItem>
-            <Icon as={GiDramaMasks} w="100px" h="100px" color="goldenrod" />
-            <Heading as="h4" size="sm">
-              Charisma
-            </Heading>
-          </GridItem>
-        </Grid>
+        <TableContainer my={8}>
+          <Table variant="simple">
+            <Thead>
+              <Tr>
+                <Th></Th>
+                <Th>Represents</Th>
+                <Th>Examples of activities</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>
+                  <Icon as={GiBiceps} w="50px" h="50px" color="palevioletred" />
+                  <Heading as="h4" size="sm">
+                    Body
+                  </Heading>
+                </Td>
+                <Td>Character&apos;s bodily limits and reflexes</Td>
+                <Td>
+                  Lifting a boulder, chasing a running enemy, fencing, drawing a
+                  bow, acrobatics, sleight-of-hand
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>
+                  <Icon
+                    as={GiSheikahEye}
+                    w="50px"
+                    h="50px"
+                    color="mediumslateblue"
+                  />
+                  <Heading as="h4" size="sm">
+                    Soul
+                  </Heading>
+                </Td>
+                <Td>Character&apos;s mental capabilities and focus</Td>
+                <Td>
+                  Speaking a foreign tongue, reading, orientation, cheating in
+                  cards, practicing spells, unlocking locks, alchemy
+                </Td>
+              </Tr>
+              <Tr>
+                <Td>
+                  <Icon as={GiDramaMasks} w="50px" h="50px" color="goldenrod" />
+                  <Heading as="h4" size="sm">
+                    Charisma
+                  </Heading>
+                </Td>
+                <Td>Character&apos;s ability to interact with others</Td>
+                <Td>
+                  Intimidation, haggling, seducing, taming a wild animal,
+                  manipulation, distracting
+                </Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
 
         <Text>
           It is also important not to think of these as some ultimate resources,
           or health points! These are mere limits that your character has at
-          their disposition. Feel free to use them, you can replentish them
+          their disposition. Feel free to use them, you can replenish them
           later.
         </Text>
         <Text>
@@ -91,6 +134,73 @@ const Stats = () => {
           avert bad outcomes, albeit for a certain price. More on managing
           resources in later paragraphs.
         </Text>
+
+        <Heading as="h3" size="md" pt={8} pb={4}>
+          Managing Resources
+        </Heading>
+        <Text>
+          It is not uncommon for your character to fail a check roll. If that
+          happens, your character either accepts the failure or averts the bad
+          outcome. In order to avert bad outcome, they have to spend their
+          resources.
+        </Text>
+        <Text>
+          The resources spent have to be of the same stat as the check (e.g.
+          failing a check while climbing a hill (physical activity) will result
+          in <Body>Body</Body> points being sacrificed).
+        </Text>
+        <Text>
+          The amount of points spent equals to the <strong>Danger Level</strong>{" "}
+          of the situation.
+        </Text>
+
+        <Heading as="h4" size="sm" pt={8} pb={4}>
+          Tiring Character
+        </Heading>
+        <Text>
+          When a character <strong>tire</strong> themselves, they spent a
+          certain amount of points. This means exactly what the title suggests -
+          a character makes an extra effort by bitting their tongue which
+          results in them pushing their limits and tiring themselves in the
+          process.
+        </Text>
+        <Text>
+          <strong>Tired</strong> resource is marked by single strikethrough mark
+          and they replenish everytime your character sleeps.
+        </Text>
+        <Card variant="filled" my={8}>
+          <CardBody>
+            <Heading as="h5" size="sm" pb={4}>
+              Example:
+            </Heading>
+            <Text>
+              Michal failed a <Charisma>Charisma</Charisma> check to flirt with
+              the burgmaster&apos;s daughter like the fucking failure he is.
+              However, his team relies on the her affection later that day, so
+              Michal desices to <strong>tire</strong> himself. As this was
+              moderately difficult situation, the <strong>Danger Level</strong>{" "}
+              was 3.
+            </Text>
+            <Text>
+              Michal spends 3 <Charisma>Charisma</Charisma> resources and averts
+              failure by turning unsucesfull courting into a joke based on
+              stereotype of a city bad boys, which amuses the target. Even
+              though the flirting succeeded in the end, Michal knows he was
+              painfully close to embarassing himself and this knowledge haunts
+              him for the rest of the afternoon (his{" "}
+              <Charisma>Charisma</Charisma> is tired).
+            </Text>
+            <HStack my={5}>
+              <Icon as={GiDramaMasks} w="50px" h="50px" color="goldenrod" />
+              <Resource> </Resource>
+              <Resource> </Resource>
+              <Resource> </Resource>
+              <Resource>/</Resource>
+              <Resource>/</Resource>
+              <Resource>/</Resource>
+            </HStack>
+          </CardBody>
+        </Card>
       </Box>
     </>
   );

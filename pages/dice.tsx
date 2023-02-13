@@ -99,7 +99,7 @@ const Dice = () => {
           <Kbd size="lg">D6</Kbd> and <Kbd>D20</Kbd>
         </Text> */}
 
-        <Heading as="h3" size="md" pt={8} pb={4}>
+        <Heading as="h2" size="lg" pt={8} pb={4} id="#danger">
           Danger Level
         </Heading>
         <Text>
@@ -109,11 +109,10 @@ const Dice = () => {
         <Text>
           Danger Level is a numeric value representing the difficulty of the
           situation your character finds themselves. Higher the value, tougher
-          the circumstances.
+          the circumstances. Usually, the default value is 3.
         </Text>
-        <TableContainer>
+        <TableContainer my={8}>
           <Table variant="simple">
-            <TableCaption>Danger levels</TableCaption>
             <Thead>
               <Tr>
                 <Th>Danger Level</Th>
