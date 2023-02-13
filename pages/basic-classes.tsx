@@ -89,9 +89,6 @@ const BasicClassesPage = () => {
                     {basciClass.name}
                   </Heading>
                   <Divider mb={3} />
-                  <Text size="sm" mb={3} textAlign="center">
-                    {basciClass.tagline}
-                  </Text>
                 </Box>
               </CardBody>
             </Card>
