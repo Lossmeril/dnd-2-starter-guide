@@ -4,27 +4,22 @@ import { Badge } from "@chakra-ui/react";
 export const basicClasses = [
   {
     name: "Fighter",
-    tagline: "A person",
     colorScheme: "red",
   },
   {
     name: "Hunter",
-
     colorScheme: "green",
   },
   {
     name: "Juggler",
-
     colorScheme: "yellow",
   },
   {
     name: "Medic",
-
     colorScheme: "purple",
   },
   {
     name: "Incantor",
-
     colorScheme: "blue",
   },
 ];
@@ -32,7 +27,6 @@ export const basicClasses = [
 export const classes = [
   {
     name: "Warrior",
-
     classA: basicClasses[0],
     classB: basicClasses[2],
     magic: 0,
