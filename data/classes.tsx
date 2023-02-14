@@ -59,7 +59,7 @@ export const classes = [
 
     skills: [
       <span key={0}>
-        Close combat and ranged combat against monsters (<Body>Body</Body>)
+        Close combat and ranged combat against beasts (<Body>Body</Body>)
       </span>,
       <span key={1}>
         Taking trophies, knowledge of ingredients (<Soul>Soul</Soul>)
@@ -68,11 +68,11 @@ export const classes = [
         Woodworking and carpentry (<Soul>Soul</Soul>)
       </span>,
       <span key={3}>
-        Intimidation of monsters (<Charisma>Charisma</Charisma>){" "}
+        Intimidation of beasts (<Charisma>Charisma</Charisma>){" "}
         <Badge colorScheme="blue">Unique</Badge>
       </span>,
       <span key={4}>
-        Taming primitive monsters (<Charisma>Charisma</Charisma>){" "}
+        Taming primitive beasts (<Charisma>Charisma</Charisma>){" "}
         <Badge colorScheme="blue">Unique</Badge>
       </span>,
     ],
@@ -111,6 +111,8 @@ export const classes = [
     classA: basicClasses[1],
     classB: basicClasses[2],
     magic: 0,
+    desc: "Men and women skilled in intrigues and intel gathering become scouts. Scouts' goal is to know as much as they can while being least noticable. To achieve their goals they utilise their contacts and improvisation skills. They are always on the move, both figuratively and literally, and two steps ahead of their enemies.",
+
     skills: [
       <span key={0}>
         Ranged combat from a horseback (<Body>Body</Body>)

@@ -19,7 +19,7 @@ const BestiaryPage = () => {
     <MainLayout>
       {categories.map((category) => (
         <>
-          <Heading as="h2" size="lg" key={category.name}>
+          <Heading as="h2" size="lg" key={category.name} pt={8} pb={4}>
             {category.name}
           </Heading>
           <Text>{category.tagline}</Text>
@@ -68,6 +68,7 @@ const BestiaryPage = () => {
               </GridItem>
             ))}
           </Grid>
+          <Divider />
         </>
       ))}
     </MainLayout>
