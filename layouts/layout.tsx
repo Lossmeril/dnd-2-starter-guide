@@ -69,6 +69,9 @@ const Navbar = () => {
       <NavbarLink href="dice">Dice Rolls</NavbarLink>
       <NavbarLink href="resources">Resources</NavbarLink>
       <NavbarLink href="exhaustion-scars">Exhaustion and Scars</NavbarLink>
+      <NavbarLink href="combat" inactive>
+        Combat
+      </NavbarLink>
       <Divider my={2} />
 
       <Heading
@@ -81,9 +84,7 @@ const Navbar = () => {
       >
         World
       </Heading>
-      <NavbarLink href="bestiary" inactive>
-        Bestiary
-      </NavbarLink>
+      <NavbarLink href="bestiary">Bestiary</NavbarLink>
     </>
   );
 };
